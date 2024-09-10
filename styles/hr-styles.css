@@ -184,7 +184,6 @@ a {
 }
 
 .text-section {
-  width: auto;
   padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium)) clamp(var(--hr-spacing-medium), 4vw, var(--hr-spacing-large));
 }
 
