@@ -144,6 +144,7 @@ a {
   grid-area: nav-center-col;
   
   display: flex;
+
   align-items: center;
   justify-content: center;
   text-align: center;
@@ -159,8 +160,21 @@ a {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: right;
+
   z-index: 0;
   overflow: hidden;
+}
+
+.has-gutter {
+  max-width: 1600px;
+
+  @media (width <=1600px) {
+    max-width: none;
+  }
 }
 
 .banner-image {
@@ -170,6 +184,7 @@ a {
 }
 
 .text-section {
+  width: auto;
   padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium)) clamp(var(--hr-spacing-medium), 4vw, var(--hr-spacing-large));
 }
 
@@ -200,7 +215,7 @@ a {
 .row-span-2 {
   grid-row-end: span 2;
 
-  @media (width <=1320px) {
+  @media (width <=1600px) {
     grid-row-end: span 1;
   }
 }
@@ -208,7 +223,7 @@ a {
 .col-span-2 {
   grid-column-end: span 2;
 
-  @media (width <=1320px) {
+  @media (width <=1600px) {
     grid-column-end: span 1;
   }
 }
