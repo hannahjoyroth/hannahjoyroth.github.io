@@ -163,16 +163,15 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: right;
 
   z-index: 0;
   overflow: hidden;
 }
 
 .has-gutter {
-  max-width: 1600px;
+  max-width: 1400px;
 
-  @media (width <=1600px) {
+  @media (width <=1400px) {
     max-width: none;
   }
 }
@@ -214,7 +213,7 @@ a {
 .row-span-2 {
   grid-row-end: span 2;
 
-  @media (width <=1600px) {
+  @media (width <=1400px) {
     grid-row-end: span 1;
   }
 }
@@ -222,7 +221,7 @@ a {
 .col-span-2 {
   grid-column-end: span 2;
 
-  @media (width <=1600px) {
+  @media (width <=1400px) {
     grid-column-end: span 1;
   }
 }
