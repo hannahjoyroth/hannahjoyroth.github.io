@@ -191,7 +191,8 @@ a {
   grid-template-columns: repeat(auto-fill, minmax(var(--hr-spacing-3x-large), 1fr));
   grid-auto-rows: var(--hr-spacing-3x-large);
   grid-gap: clamp(var(--hr-spacing-small), 4vw, var(--hr-spacing-regular));
-  
+
+  width: calc(100vw - clamp(var(--hr-spacing-small), 4vw, var(--hr-spacing-large)));
   padding: 0 clamp(var(--hr-spacing-small), 4vw, var(--hr-spacing-large)) clamp(var(--hr-spacing-small), 4vw, var(--hr-spacing-large));
 
   @media (width <=875px) {
