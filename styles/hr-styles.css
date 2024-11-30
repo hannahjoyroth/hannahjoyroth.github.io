@@ -6,8 +6,8 @@
   font-family: "Optima";
   text-transform: lowercase;
 
-  --hr-neutral: #FFFFFF;
-  --hr-primary: #AC982F;
+  --hr-neutral: #EAE7D8;
+  --hr-primary: #0B3A37;
 
   --hr-spacing-4x-large: 36rem;
   --hr-spacing-3x-large: 24rem;
@@ -129,6 +129,10 @@ a {
   text-decoration-line: underline;
 }
 
+.nav-item--active {
+  text-decoration-line: underline;
+}
+
 .nav-left-col {
   grid-area: nav-left-col;
   
@@ -163,6 +167,8 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  background-color: var(--hr-neutral);
 
   z-index: 0;
   overflow: hidden;
