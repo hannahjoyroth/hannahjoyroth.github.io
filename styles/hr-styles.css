@@ -20,9 +20,9 @@
   --hr-spacing-x-small: .5rem;
 
   --hr-font-size-x-large: 1.8rem; 
-  --hr-font-size-large: 1.6rem; 
-  --hr-font-size-medium: 1.3rem;
-  --hr-font-size-regular: 1.1rem;
+  --hr-font-size-large: 1.4rem; 
+  --hr-font-size-medium: 1.4rem;
+  --hr-font-size-regular: 1rem;
   --hr-font-size-small: 0.8rem;
   --hr-font-size-x-small: 0.6rem;
 
@@ -30,15 +30,15 @@
   --hr-font-weight-semi-bold: 600;
   --hr-font-weight-regular: 500;
 
-  --hr-line-height-loose: 1.4;
-  --hr-line-height-regular: 1;
-  --hr-line-height-dense: 0.8;
+  --hr-line-height-loose: 1.6;
+  --hr-line-height-regular: 1.4;
+  --hr-line-height-dense: 1;
 
   --hr-border-width: 0.1rem;
   --hr-border-radius: 1rem;
 }
 
-/*styles*/
+/*typesets*/
 
 .text-x-large {
   color: var(--hr-neutral);
@@ -73,7 +73,7 @@
   line-height: var(--hr-line-height-regular);
 }
 
-/*main*/
+/*header, footer*/
 
 .header {
   display: grid;
@@ -96,16 +96,56 @@
   z-index: 1;
   margin: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-regular));
   
+  color: var(--hr-neutral);
   background-color: var(--hr-primary);
   border-radius: var(--hr-border-radius);
+}
+
+.nav-left-col {
+  grid-area: nav-left-col;
+  
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  
+  padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
+  gap: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
+}
+
+.nav-center-col {
+  grid-area: nav-center-col;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
+}
+
+.nav-right-col {
+  grid-area: nav-right-col;
+  
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
+}
+
+.nav-item {
   color: var(--hr-neutral);
 }
 
-.text-title {
-  font-size: clamp(var(--hr-font-size-medium), 4vw, var(--hr-font-size-x-large));
-  font-weight: var(--hr-font-weight-bold);
-  line-height: var(--hr-line-height-regular);
-  text-transform: uppercase;
+.nav-item:hover {
+  text-decoration-line: underline;
+}
+
+.nav-item--active {
+  text-decoration-line: underline;
+}
+
+.mark {
+  width: calc(var(--hr-spacing-x-large) + 5vw);
+  height: auto;
 }
 
 .nav-button {
@@ -125,43 +165,21 @@ a {
   text-decoration: none;
 }
 
-.nav-item:hover {
-  text-decoration-line: underline;
-}
-
-.nav-item--active {
-  text-decoration-line: underline;
-}
-
-.nav-left-col {
-  grid-area: nav-left-col;
+.footer-nav {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: var(--hr-spacing-x-large);
+  grid-template-areas: "nav-left-col nav-center-col nav-right-col";
   
-  display: flex;
-  align-items: center;
-  justify-content: left;
-  
-  padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
-  gap: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
+  background-color: var(--hr-primary);
 }
 
-.nav-center-col {
-  grid-area: nav-center-col;
-  
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+.icon {
+  width: var(--hr-spacing-large);
+  height: auto;
 }
 
-.nav-right-col {
-  grid-area: nav-right-col;
-  
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium));
-}
+/*main*/
 
 .main {
   display: flex;
@@ -189,6 +207,10 @@ a {
 }
 
 .text-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  gap: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-small));
   padding: clamp(var(--hr-spacing-x-small), 4vw, var(--hr-spacing-medium)) clamp(var(--hr-spacing-medium), 4vw, var(--hr-spacing-large));
 }
 
@@ -231,13 +253,4 @@ a {
   @media (width <=1400px) {
     grid-column-end: span 1;
   }
-}
-
-.footer-nav {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: var(--hr-spacing-x-large);
-  grid-template-areas: "nav-left-col nav-center-col nav-right-col";
-  
-  background-color: var(--hr-primary);
 }
