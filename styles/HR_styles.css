@@ -1,9 +1,12 @@
 /*variables*/
 
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 .site {
   margin: 0;
-  
-  font-family: "Optima";
+
+  font-family: "DM Sans", sans-serif;
+  font-weight: regular;
   text-transform: lowercase;
 
   --hr-neutral: #EAE7D8;
